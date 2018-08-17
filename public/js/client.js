@@ -63,3 +63,9 @@ var notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지�
    function redirectToPromotion() {
         location.href= "promotion"
    }
+
+
+  $("#cancel").click(function(){
+        $('#popup1').addClass('hidden');
+        $('#coupon-form').removeClass('hidden');
+  });
