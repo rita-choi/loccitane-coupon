@@ -1,0 +1,278 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face{font-family:'Futura Com'; src:url('fonts/Futura_com_medium.ttf')}
+
+*{margin: 0px; padding: 0; border: 0; word-break: keep-all;}
+
+body {
+  margin: 0;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  color: #16243e;
+  text-align: center;
+}
+
+a {text-decoration: none;}
+
+.hidden {
+display: none;
+}
+
+/*pop up*/
+.popup {
+  position: fixed;
+  padding: 10px;
+  width: 80%;
+  height: 200px;
+  top: 50%;
+  left: 7%;
+  margin-top: -110px;
+  background: #ffffff;
+  z-index: 20;
+}
+
+.cta {
+  position: relative;
+  float: left;
+  left: 15%;
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+#popup1:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#popup1:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  border: 5px solid #ffcb00;
+  z-index: -1;
+}
+
+/* logo */
+.logo_wrap {
+  background: #ffffff;
+  width: 100%;
+  top: 0;
+  border-bottom: .4rem solid #ffcb00;
+}
+
+.logo_wrap .primary-logo {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logo_wrap .primary-logo img {
+  display: block;
+  width: auto;
+  height: 22px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* language select*/
+.language-wrap {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.language-wrap li {
+  float: left;
+  list-style: none;
+}
+
+.language-wrap a {
+  display: block;
+  color: #fff;
+  font-family: Arial,'Futura Com', sans-serif;
+  font-size: .9em;
+  font-weight: 800;
+  letter-spacing: normal;
+}
+
+.option-container {
+  position: absolute;
+  right: 0;
+  padding: 5px 10px 10px 10px;
+}
+
+.option-border {
+  margin-top: 2px;
+  padding: 0 10px;
+  font-size: .7em;
+  color: #ffffff;
+}
+
+/*content section*/
+.content-section {
+  position: relative;
+  height: 730px;
+  width: 100%;
+}
+
+.hero-section-wrap {
+  height: 440px;
+  background: url(../images/BG_MO.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.hero-product-title {
+  padding: 5px 0px 10px 0px;
+  color: #ffffff;
+}
+
+.hero-product-title h1 {font-size: 1.4em;  font-weight: 600; line-height: 1.3;}
+.hero-product-title h3 {font-size: 1em;  font-weight: 400; margin-top: 3px;}
+
+.hero-product-text-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.event-text-container {
+  position: absolute;
+  right: 5%;
+  background-color: #ffcb00;
+  width: 55%;
+  padding: 40px 0;
+  background: url(../images/bubble.png) no-repeat center;
+  background-size: contain;
+}
+
+.event-text p, .sub-product p {
+  color: #16243e;
+  font-size: .9em;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.4;
+}
+
+.text-gradient {
+    font-size: 1.2em;
+    font-weight: 900;
+    background: #cb0404;
+    background: -webkit-linear-gradient(left, #2c214d, #822140, #bc4236);
+    background:    -moz-linear-gradient(right, #2c214d, #822140, #bc4236);
+    background:      -o-linear-gradient(right, #2c214d, #822140, #bc4236);
+    background:         linear-gradient(to right, #2c214d, #822140, #bc4236);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+
+.coupon-cta {
+  background: transparent;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 0.8em;
+  color: #16243e;
+  margin: 0;
+}
+
+.sub-product {
+  position: absolute;
+  right: 3%;
+  margin-top: 5px;
+  padding: 30px 20px;
+  background: url(../images/bubble2.png) no-repeat center;
+  background-size: contain;
+}
+
+/*gift-section*/
+.gift-section-title h3 {
+  display: inline-block;
+  font-weight: 300;
+  padding: 10px 10px 7px 10px;
+  background-color: #fff;
+}
+
+.gift-section-wrap {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  height: 280px;
+  background: url(../images/gift-border.jpg) no-repeat center;
+  background-size: contain;
+}
+
+.gift {
+  display: inline-block;
+  width: 140px;
+}
+
+.right-box {margin-left: 3%;}
+
+.gift h4 {
+  font-size: 0.8em;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+}
+
+.gift img {height: 100px;}
+
+.gift p {font-size: .9em; font-weight: 600; letter-spacing: -0.05em; line-height: 1.4;}
+
+.text-line {width:20px; border: 0.5px solid #08225c; margin: 5px auto;}
+
+.vl {
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  border-left: 1px solid #08225c;
+  height: 190px;
+  left: 50%;
+}
+
+/*footer-section*/
+.site-footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #152a59;
+}
+
+.footer-section-contents {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: normal;
+}
+
+.small-text-footer {
+  font-size: 0.9em;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+/*for tablet*/
+@media only screen and (max-width: 1024px) and (min-width: 481px){
+  .popup {
+    display: block;
+    position: fixed;
+    padding: 10px;
+    width: 80%;
+    height: 180px;
+    top: 30%;
+    left: 8%;
+    background: #ffffff;
+    border: 5px solid #ffcb00;
+    z-index: 20;
+  }
+}
