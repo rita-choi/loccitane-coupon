@@ -19,20 +19,31 @@ a {text-decoration: none;}
   position: fixed;
   padding: 10px;
   width: 80%;
-  height: 200px;
+  height: 220px;
   top: 50%;
   left: 7%;
-  margin-top: -110px;
+  margin-top: -150px;
   background: #ffffff;
   z-index: 20;
 }
 
+.popup-text {margin-top: 25px;}
+.popup-text h3 {padding-bottom: 15px; font-size: 1.3em; font-weight: 800;}
+.popup-text p {font-size: .95em; font-weight: 500; }
+
+.cta-section{
+  display:inline-block;
+  width: 250px;
+}
 .cta {
-  position: relative;
   float: left;
-  left: 15%;
-  margin: 20px;
-  padding: 10px 20px;
+  margin: 15px;
+  padding: 5px 30px;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #ffcb00;
+  border-radius: 5px;
 }
 
 #popup1:after {
@@ -105,7 +116,7 @@ a {text-decoration: none;}
 .option-container {
   position: absolute;
   right: 0;
-  padding: 5px 10px 10px 10px;
+  padding: 5px 20px 10px 10px;
 }
 
 .option-border {
@@ -123,7 +134,7 @@ a {text-decoration: none;}
 }
 
 .hero-section-wrap {
-  height: 440px;
+  height: 433px;
   background: url(../images/BG_MO.jpg) no-repeat center;
   background-size: cover;
 }
@@ -145,48 +156,43 @@ a {text-decoration: none;}
 .event-text-container {
   position: absolute;
   margin-top: 20px;
-  right: 3%;
+  right: -1%;
   background-color: #ffcb00;
   width: 55%;
-  padding: 30px 0;
+  padding: 25px 0;
   background: url(../images/bubble.png) no-repeat center;
   background-size: contain;
 }
 
 .event-text p, .sub-product p {
   color: #16243e;
-  font-size: .95em;
+  font-size: .9em;
   font-weight: 500;
   letter-spacing: -0.05em;
   line-height: 1.3;
 }
 
-.text-gradient {
-    font-size: 1.1em;
-    font-weight: 900;
-    background: #cb0404;
-    background: -webkit-linear-gradient(left, #2c214d, #822140, #bc4236);
-    background:    -moz-linear-gradient(right, #2c214d, #822140, #bc4236);
-    background:      -o-linear-gradient(right, #2c214d, #822140, #bc4236);
-    background:         linear-gradient(to right, #2c214d, #822140, #bc4236);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-  }
+.svg-text {
+  width: 65%;
+  margin-top: 2px;
+  margin-bottom: -4px;
+}
 
 .coupon-cta {
   background: transparent;
   font-family: normal dotum,'Noto Sans KR', sans-serif;
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: 0.75em;
   color: #16243e;
   margin: 0;
 }
 
+.small-arrow {font-size: 0.6em; margin-left: 3px;}
+
 .sub-product {
   position: absolute;
   right: 10%;
-  margin-top: -5px;
+  margin-top: -15px;
   padding: 30px 22px;
   background: url(../images/bubble2.png) no-repeat center;
   background-size: contain;

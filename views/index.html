@@ -21,7 +21,10 @@
     <section>
       <div class="content-section">
         <div class="popup hidden" id="popup1">
+          <div class="popup-text">
        <div id="msg"> </div>
+          </div>
+          <div class="cta-section">
           <form id="used-coupon" name="used_form">
             <input type="hidden" name="savedcoupon" id="coupon" >
               <input type="hidden" name="savedip" id="ip" name="Savedip">
@@ -29,6 +32,7 @@
           <button class="cta" id="coupon_btn">확인</button>
           </form>
           <button class="cta" id="cancel">취소</button>
+          </div>
         </div>
         <div class="hero-section-wrap">
           <div class="language-wrap">
@@ -49,7 +53,9 @@
               <a href="#">
                 <div class="event-text-container">
                 <div class="event-text">
-                  <p>록시땅 매장에<br />방문하시면,<br /><span class="text-gradient">NEW 이모르뗄 리셋 <br />오일 인 세럼<br /></span>사셰를 드립니다.</p>
+                  <p>록시땅 매장에<br />방문하시면,</p>
+                  <img class="svg-text" src="images/text-kor.svg" alt="NEW 이모르뗄 리셋 오일 인 세럼"/>
+                  <p>사셰를 드립니다.</p>
                   <form id="coupon-form">
                   <input type="hidden" name="coupon" value='<%= coupon %>'>
                   <input type="hidden" name="currentip" value='<%= ip %>'>
@@ -93,5 +99,5 @@
     </div>
   </div>
   </body>
-    <script src="js/client.js"></script>
+      <script src="js/client.js"></script>
 </html>
