@@ -106,7 +106,6 @@ console.log("저장된 쿠폰 불러옴");
 
 newRef.orderByChild('ip').equalTo(clientIp).once("value").then(function(snapshot){
     snapshot.forEach(function(coupons){
-console.log("used value>>>" + coupons.val().used);
 
   res.send(coupons.val());
 

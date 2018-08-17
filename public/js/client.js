@@ -21,10 +21,7 @@ var notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지�
                   $("#"+key).val(data[key]);
                 }
 
-                $('#coupon-form').addClass('hidden');
                 $('#popup1').removeClass('hidden');
-                $('#used-coupon').removeClass('hidden');
-
                 $("#msg").html(notice);
             },
             error: function( jqXhr, textStatus, errorThrown ){
@@ -47,8 +44,10 @@ var notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지�
             contentType: 'application/x-www-form-urlencoded',
             data: $(this).serialize(),
             success: function( data, textStatus, jQxhr ){
-
-                setTimeout('redirectToPromotion()', 1000);
+                $("#msg").html(data);
+                $("#cancel").addClass("hidden");
+                $("#coupon_btn").addClass("hidden");
+                setTimeout('redirectToPromotion()', 2000);
 
             },
             error: function( jqXhr, textStatus, errorThrown ){
