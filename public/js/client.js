@@ -61,7 +61,7 @@ var notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지�
 })(jQuery);
 
    function redirectToPromotion() {
-        location.href= "promotion"
+        location.replace("promotion");
    }
 
 

@@ -164,7 +164,7 @@ admin.database().ref('coupons/'+coupons.key+'/used').set(used_cnt);
 if(coupons.val().used == 1){
     res.send("<h3>이미 사용된 쿠폰입니다.</h3>");
 }else{
-      res.send("<h3>ㅇㅅㅇ 샘플 받아가시5</h3>");
+      res.send("<h3>감사합니다. <br> 상품을 수령해 주세요!</h3>");
 }
   });
   });
