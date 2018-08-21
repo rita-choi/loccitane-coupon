@@ -91,7 +91,7 @@ var newRef = db.ref("coupons");
 newRef.orderByChild('ip').equalTo(clientIp).once("value").then(function(snapshot){
 console.log("진입");
 var data = snapshot.val(); //전체 데이터가 있는지 없는지 파악하는 것이기 때문에 의미가 없음;
-
+console.log("쿠폰 발급 받았나 확인 >>> "+ data);
   if(data) next(); //이미 쿠폰을 발급받은 내역이 있는 경우
   if(data === null) next('route'); //발급받지 않은 경우
 });
@@ -150,6 +150,7 @@ app.post('/usecoupon', urlencodedParser,  function(req,res,next) {
 console.log("쿠폰 사용 여부 확인");
 var LoccitaneCouponInfo = req.body.savedcoupon;
 var clientIp = req.body.savedip; // on localhost > 127.0.0.1
+var lang = req.body.lang;
 var used_cnt = 1;
 var newRef = db.ref("coupons");
 //  var couponsRef = ref.child("campaign_coupon")
@@ -162,9 +163,11 @@ console.log("used value>>>" + coupons.val().used);
 admin.database().ref('coupons/'+coupons.key+'/used').set(used_cnt);
 
 if(coupons.val().used == 1){
-    res.send("<h3>이미 사용된 쿠폰입니다.</h3>");
+  if(lang == "cn") res.send("<style>.popup {height: 220px !important; top: 50% !important;} .popup-text { margin-top: 75px !important; }</style><h3>每人限享礼遇一次<br/>感谢支持欧舒丹</h3>")
+  if(lang == "kr") res.send("<style>.popup-text { margin-top: 85px !important; }</style><h3>이미 사용된 쿠폰입니다.</h3>");
 }else{
-      res.send("<h3>감사합니다. <br> 상품을 수령해 주세요!</h3>");
+  if(lang == "cn") res.send("<style>.popup {height: 220px !important; top: 50% !important;} .popup-text { margin-top: 85px !important; }</style><h3>使用</h3>")
+  if(lang == "kr") res.send("<style>.popup-text { margin-top: 85px !important; }</style><h3>쿠폰이 사용되었습니다.</h3>");
 }
   });
   });
@@ -172,13 +175,86 @@ if(coupons.val().used == 1){
 
 });
 
+
+app.post('/clicked', urlencodedParser, function(req,res,next) {
+clientIp = req.body.currentip;
+console.log("IP 확인");
+
+
+var newRef = db.ref("coupons");
+
+newRef.orderByChild('ip').equalTo(clientIp).once("value").then(function(snapshot){
+console.log("진입");
+var data = snapshot.val(); //전체 데이터가 있는지 없는지 파악하는 것이기 때문에 의미가 없음;
+
+  if(data) next(); //이미 쿠폰을 발급받은 내역이 있는 경우
+  if(data === null) next('route'); //발급받지 않은 경우
+});
+
+
+
+}, function (req, res, next){
+  var newRef = db.ref("coupons");
+console.log("저장된 쿠폰 불러옴");
+
+
+
+newRef.orderByChild('ip').equalTo(clientIp).once("value").then(function(snapshot){
+    snapshot.forEach(function(coupons){
+
+  res.send(coupons.val());
+
+
+  });
+  });
+
+
+});
+
+
+
+app.route('/kr').get(function(req, res){
+//kr로 언어 변경하는 경우
+var LoccitaneCouponInfo = "";
+var clientIp = requestIp.getClientIp(req); // on localhost > 127.0.0.1
+var used_cnt = 0;
+//coupon cmd 창에 출력
+console.log("clientIp>>>>"+ clientIp);
+//Ip 출력
+
+//id 저장
+
+//ref.once("value", function(snapshot) {
+//  console.log(snapshot.val());
+//});\
+
+
+var LoccitaneCoupon = coupon("LoccitaneCoupon").limit(1).only("Sample");
+//쿠폰을 자동으로 생성해 주는 coupon 모듈 / npm install coupon
+var LoccitaneCouponInfo = JSON.stringify(LoccitaneCoupon.json().id);
+//npm install json-stringify --save 설치
+used_cnt = 0;
+
+res.render('kr.html', {
+'coupon' : LoccitaneCouponInfo,
+'ip' : clientIp,
+'used' : used_cnt
+});
+
+})
+
 app.route('/promotion').get(function(req, res){
-//여기에 동작 구현
+//프로모션 페이지
 
 res.render('promotion.html');
 
-//index.html를 렌더링하며 coupon 코드 전송
-//res.render('index.html')
+})
+
+app.route('/promotion-kr').get(function(req, res){
+//프로모션 페이지
+
+res.render('promotion-kr.html');
+
 })
 
 

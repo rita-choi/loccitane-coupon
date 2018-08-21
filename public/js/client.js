@@ -1,11 +1,18 @@
 console.log('Client-side code running');
 
-$( document ).ready(function() {
-    console.log( "ready!" );
+var notice ="";
 
+$( document ).ready(function() {
+    console.log( "CN ready!" );
+
+if($('#lang').val() === "cn") notice = "<h3>立即到乐天免税店12/F欧舒丹专柜<br />换领试用装</h3><img src='images/map.jpg'/><p>每人限享礼遇一次, 按下「确认」<br />后表示欧舒丹美容顾问已经认证并 <br />派发礼品，往后将不能再次换领</p>";
+if($('#lang').val() === "kr") notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지를 직원에게 보여주세요.</p><p>직원 확인 후에 쿠폰은 사용처리되어<br />더이상 쓸 수 없습니다.</p>";
+
+console.log("언어>>>"+ notice);
 });
 
-var notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지를 직원에게 보여주세요.</p><p>직원 확인 후에 쿠폰은 사용처리되어<br />더이상 쓸 수 없습니다.</p>";
+
+
 
 (function($){
     function processForm( e ){
@@ -61,7 +68,8 @@ var notice = "<h3>쿠폰을 사용 하시겠습니까?</h3><p>현재 페이지�
 })(jQuery);
 
    function redirectToPromotion() {
-        location.replace("promotion");
+        if($('#lang').val() == "cn") location.replace("promotion");
+        if($('#lang').val() == "kr") location.replace("promotion-kr");
    }
 
 

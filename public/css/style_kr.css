@@ -1,0 +1,492 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face{font-family:'Futura Com'; src:url('fonts/FUTURAB.ttf')}
+
+*{margin: 0px; padding: 0; border: 0; word-break: keep-all;}
+
+body {
+  margin: 0;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  color: #16243e;
+  text-align: center;
+}
+
+a {text-decoration: none;}
+
+/*pop up*/
+.hidden {display: none;}
+
+.popup {
+  position: fixed;
+  padding: 10px;
+  width: 80%;
+  height: 220px;
+  top: 50%;
+  left: 7%;
+  margin-top: -150px;
+  background: #ffffff;
+  z-index: 20;
+}
+
+.popup-text {margin-top: 25px;}
+.popup-text h3 {padding-bottom: 15px; font-size: 1.3em; font-weight: 800;}
+.popup-text p {font-size: .95em; font-weight: 500; }
+
+.cta-section {
+  display:inline-block;
+  width: 250px;
+}
+.cta {
+  float: left;
+  margin: 15px;
+  padding: 5px 30px;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #ffcb00;
+  border-radius: 5px;
+}
+
+#popup1:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#popup1:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  border: 5px solid #ffcb00;
+  z-index: -1;
+}
+
+/* logo */
+.logo_wrap {
+  background: #ffffff;
+  width: 100%;
+  top: 0;
+  border-bottom: .4rem solid #ffcb00;
+}
+
+.logo_wrap .primary-logo {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logo_wrap .primary-logo img {
+  display: block;
+  width: auto;
+  height: 22px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* language select*/
+.language-wrap {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.language-wrap li {
+  float: left;
+  list-style: none;
+  margin-top: 5px;
+}
+
+.language-wrap a {
+  display: block;
+  color: #fff;
+  font-family: Arial,'Futura Com', sans-serif;
+  font-size: .9em;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.option-container {
+  position: absolute;
+  right: 0;
+  padding: 5px 20px 10px 10px;
+}
+
+.option-border {
+  margin-top: 2px;
+  padding: 0 10px;
+  font-size: .7em;
+  color: #ffffff;
+}
+
+/*content section*/
+.content-section {
+  position: relative;
+  height: 730px;
+  width: 100%;
+}
+
+.hero-section-wrap {
+  height: 433px;
+  background: url(../images/BG_MO.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.hero-product-title {
+  padding: 5px 0px 10px 0px;
+  color: #ffffff;
+}
+
+.hero-product-title h1 {font-size: 1.4em;  font-weight: 600; line-height: 1.3;}
+.hero-product-title h3 {font-size: 1em;  font-weight: 400; margin-top: 3px;}
+
+.hero-product-text-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.event-text-container {
+  position: absolute;
+  margin-top: 20px;
+  right: -1%;
+  background-color: #ffcb00;
+  width: 55%;
+  padding: 25px 0;
+  background: url(../images/bubble.png) no-repeat center;
+  background-size: contain;
+}
+
+.event-text p, .sub-product p {
+  color: #16243e;
+  font-size: .9em;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.3;
+}
+
+.svg-text {
+  width: 65%;
+  margin-top: 2px;
+  margin-bottom: -4px;
+}
+
+.coupon-cta {
+  background: transparent;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 0.75em;
+  color: #16243e;
+  margin: 0;
+}
+
+.small-arrow {font-size: 0.6em; margin-left: 3px;}
+
+.sub-product {
+  position: absolute;
+  right: 10%;
+  margin-top: -15px;
+  padding: 30px 22px;
+  background: url(../images/bubble2.png) no-repeat center;
+  background-size: contain;
+}
+
+.sub-product p {font-size: .85em;}
+
+/*gift-section*/
+.gift-section-title h3 {
+  display: inline-block;
+  font-weight: 300;
+  padding: 10px 10px 5px 10px;
+  background-color: #fff;
+}
+
+.gift-section-wrap {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  height: 280px;
+  background: url(../images/gift-border.jpg) no-repeat center;
+  background-size: contain;
+}
+
+.gift {
+  display: inline-block;
+  width: 140px;
+}
+
+.right-box {margin-left: 3%;}
+
+.gift h4 {
+  font-size: 0.85em;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+}
+
+.gift img {height: 100px;}
+
+.gift p {
+  font-size: .95em;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.4;
+}
+
+.highlight {
+  color:#ffcb00;
+  font-weight: 800;
+}
+
+.text-line {width:20px; border: 0.5px solid #08225c; margin: 5px auto;}
+
+.vl {
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  border-left: 1px solid #08225c;
+  height: 190px;
+  left: 50%;
+}
+
+/*footer-section*/
+.site-footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #152a59;
+}
+
+.footer-section-contents {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: normal;
+}
+
+.small-text-footer {
+  font-size: 0.9em;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+/*for tablet*/
+@media only screen and (max-width: 1024px) and (min-width: 481px){
+  .language-wrap {
+    height: 60px;
+  }
+
+  .logo_wrap .primary-logo img {
+    height: 40px;
+    padding: 20px;
+  }
+
+  .content-section {
+    height: 1400px;
+  }
+
+  .hero-section-wrap {
+    height: 850px;
+  }
+
+  .language-wrap a {
+    font-family: Arial,'Futura Com', sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  .option-container {
+    position: absolute;
+    right: 0;
+    padding: 20px 30px 10px 10px;
+  }
+
+  .option-border {
+    margin-top: 2px;
+    padding: 0 10px;
+    font-size: .9em;
+    color: #ffffff;
+  }
+
+  .hero-product-title {
+    padding: 5px 0px 10px 0px;
+    color: #ffffff;
+  }
+
+  .hero-product-title h1 {font-size: 2.8em;  font-weight: 600; line-height: 1.3;}
+  .hero-product-title h3 {font-size: 1.8em;  font-weight: 400; margin-top: 3px;}
+
+  .hero-product-text-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+
+  .event-text-container {
+    margin-top: 80px;
+    width: 55%;
+    padding: 45px 0;
+  }
+
+  .event-text p, .sub-product p {
+    font-size: 1.7em;
+    font-weight: 600;
+  }
+
+  .svg-text {
+    width: 50%;
+  }
+
+  .coupon-cta {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  .small-arrow {font-size: 0.8em; margin-left: 5px;}
+
+  .sub-product {
+    position: absolute;
+    right: 10%;
+    margin-top: 180px;
+    padding: 40px;
+  }
+
+  .sub-product p {font-size: 1.5em;}
+
+  /*gift-section*/
+  .gift-section-title h3 {
+    font-size: 2em;
+    font-weight: 300;
+    padding: 10px 10px 5px 10px;
+    background-color: #fff;
+  }
+
+  .gift-section-wrap {
+    height: 555px;
+    background: url(../images/gift-border-tablet.jpg) no-repeat center;
+    background-size: contain;
+  }
+
+  .gift {
+    display: inline-block;
+    width: 300px;
+    padding-top: 10px;
+  }
+  .right-box {margin-left: 3%;}
+
+  .gift h4 {
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+  }
+
+  .left-box img {height: 180px; padding-top: 50px; padding-bottom: 20px;}
+  .right-box img {height: 250px;}
+
+  .gift p {
+    font-size: 1.5em;
+  }
+
+  .highlight {
+    font-weight: 600;
+  }
+
+  .text-line {width:30px; border: 1px solid #08225c; margin: 10px auto;}
+
+  .vl {
+    margin-top: 40px;
+    height: 350px;
+  }
+
+  .footer-section-contents {
+    padding: 30px;
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+
+  .small-text-footer {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+
+  .popup {
+    padding: 10px;
+    height: 490px;
+    top: 45%;
+    left: 9%;
+  }
+
+  .popup-text {margin-top: 70px;}
+  .popup-text h3 {padding-bottom: 15px; font-size: 2.8em; font-weight: 600;}
+  .popup-text p {font-size: 2em; font-weight: 500; }
+
+  .cta-section {
+    display:inline-block;
+    width: 600px;
+    height: 70px;
+    margin-left: 50px;
+  }
+  .cta {
+    float: left;
+    margin: 40px;
+    padding: 10px 60px;
+    font-size: 2.2em;
+    font-weight: 500;
+    border-radius: 10px;
+  }
+
+  #popup1:before {
+    border: 10px solid #ffcb00;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .popup, .event-content-section, .gift-section-wrap, .site-footer {display:none;}
+
+  .language-wrap {
+    height: 60px;
+  }
+
+  .language-wrap a {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .option-container {
+    position: absolute;
+    right: 32%;
+    padding-top: 20px;
+  }
+
+  .option-border {
+    margin-top: -10px;
+    padding: 0 10px;
+    font-size: 0.8em;
+    color: #ffffff;
+  }
+
+  .logo_wrap .primary-logo img {
+    height: 5vh;
+    padding: 2vh;
+  }
+
+  .hero-section-wrap {
+    height: 91vh;
+    width: 100%;
+    background: url(../images/BG_PC_KR.jpg) no-repeat center;
+    background-size: cover;}
+
+  .hero-product-title h1 {font-size: 2.8em;}
+  .hero-product-title h3 {font-size: 1.7em;}
+}
