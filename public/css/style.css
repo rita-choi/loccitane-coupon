@@ -168,7 +168,7 @@ a {text-decoration: none;}
   right: -1%;
   background-color: #ffcb00;
   width: 55%;
-  padding: 47px 0;
+  padding: 50px 0;
   background: url(../images/bubble.png) no-repeat center;
   background-size: contain;
 }
@@ -195,7 +195,7 @@ a {text-decoration: none;}
   background-size: contain;
 }
 
-.sub-product p {font-size: .7em;  font-weight: 800;}
+.sub-product p {font-size: .7em;  font-weight: 800; letter-spacing: -0.1em;}
 
 /*gift-section*/
 .gift-section-title h3 {
@@ -241,6 +241,10 @@ a {text-decoration: none;}
   line-height: 1.4;
 }
 
+.gift.right-box {
+  padding-left: 5px;
+}
+
 .highlight {
   color:#ffcb00;
   font-weight: 800;
@@ -281,6 +285,14 @@ a {text-decoration: none;}
   font-size: 0.8em;
   font-weight: 200;
   margin-top: 15px;
+}
+
+/*for iphone 5*/
+@media only screen and (max-width: 330px) and (min-width: 320px) {
+  .content-section {height: 710px;}
+  .gift.right-box {padding-left: 0px;}
+  .gift-content-wrap {margin-top: -10px;}
+  .gift-section-wrap {height: 265px;}
 }
 
 /*for tablet*/
@@ -361,10 +373,11 @@ a {text-decoration: none;}
     padding: 70px;
   }
 
-  .sub-product p {font-size: 1.3em;}
+  .sub-product p {font-size: 1.3em; letter-spacing: -0.1em;}
 
   /*gift-section*/
   .gift-section-title h3 {
+    font-family: Arial,'Futura Com', sans-serif;
     font-size: 2em;
     font-weight: 300;
     padding: 10px 10px 5px 10px;
@@ -434,7 +447,7 @@ a {text-decoration: none;}
     left: 9%;
   }
 
-  .popup-text {margin-top: 20px;}
+  .popup-text {margin-top: 30px;}
   .popup-text h3 {padding-bottom: 15px; font-size: 2em; font-weight: 600;}
   .popup-text p {font-size: 1.4em; font-weight: 500; }
   .popup-text img {width: 450px;}
