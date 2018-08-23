@@ -32,6 +32,15 @@ a {text-decoration: none;}
 .popup-text img {width: 265px;}
 .popup-text p {font-size: .9em; font-weight: 500; margin-top: 5px;}
 
+.coupon-cta {
+  background: transparent;
+  font-family: normal dotum,'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  font-size: 0.75em;
+  color: #16243e;
+  margin: 0;
+}
+
 .cta-section{
   display:inline-block;
   width: 250px;
