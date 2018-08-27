@@ -32,15 +32,6 @@ a {text-decoration: none;}
 .popup-text img {width: 265px;}
 .popup-text p {font-size: .9em; font-weight: 500; margin-top: 5px;}
 
-.coupon-cta {
-  background: transparent;
-  font-family: normal dotum,'Noto Sans KR', sans-serif;
-  font-weight: 600;
-  font-size: 0.75em;
-  color: #16243e;
-  margin: 0;
-}
-
 .cta-section{
   display:inline-block;
   width: 250px;
@@ -165,17 +156,24 @@ a {text-decoration: none;}
 .event-text-container {
   position: absolute;
   margin-top: 20px;
-  right: -1%;
-  background-color: #ffcb00;
-  width: 55%;
-  padding: 50px 0;
-  background: url(../images/bubble.png) no-repeat center;
-  background-size: contain;
+  right: 1%;
+
 }
 
-.event-text h1 {
-  margin-top: -10px;
+.click-text {font-size: 2em; font-weight: bold; line-height: 1.5em;}
+
+.coupon-cta {
+  background: transparent;
+  font-family: normal dotum,'YaHei', sans-serif;
+  padding: 45px 0;
+  width: 176px;
+  font-weight: 600;
+  font-size: 0.75em;
   color: #16243e;
+  margin: 0;
+  background: url(../images/bubble.png) no-repeat center;
+  background-size: contain;
+  border: none;
 }
 
 .event-text p, .sub-product p {
@@ -347,9 +345,11 @@ a {text-decoration: none;}
 
   .event-text-container {
     margin-top: 40px;
-    width: 55%;
+  }
+
+  .coupon-cta {
     padding: 100px;
-    right: -15%;
+    width: 422px;
   }
 
   .event-text h1 {font-size: 2.8em;  font-weight: 600; line-height: 1.3;}
