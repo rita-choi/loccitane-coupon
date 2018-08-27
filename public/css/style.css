@@ -156,8 +156,7 @@ a {text-decoration: none;}
 .event-text-container {
   position: absolute;
   margin-top: 20px;
-  right: 1%;
-
+  right: 4%;
 }
 
 .click-text {font-size: 2em; font-weight: bold; line-height: 1.5em;}
@@ -165,7 +164,8 @@ a {text-decoration: none;}
 .coupon-cta {
   background: transparent;
   font-family: normal dotum,'YaHei', sans-serif;
-  padding: 45px 0;
+  padding: 50px;
+  padding-top: 40px;
   width: 176px;
   font-weight: 600;
   font-size: 0.75em;
