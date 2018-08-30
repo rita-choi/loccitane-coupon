@@ -166,7 +166,7 @@ if(coupons.val().used == 1){
   if(lang == "cn") res.send("<style>.popup {height: 220px !important; top: 50% !important;} .popup-text { margin-top: 75px !important; }</style><h3>每人限享礼遇一次<br/>感谢支持欧舒丹</h3>")
   if(lang == "kr") res.send("<style>.popup-text { margin-top: 85px !important; }</style><h3>이미 사용된 쿠폰입니다.</h3>");
 }else{
-  if(lang == "cn") res.send("<style>.popup {height: 220px !important; top: 50% !important;} .popup-text { margin-top: 85px !important; }</style><h3 style='font-size: 1.3em;nono'>使用 完了</h3>")
+  if(lang == "cn") res.send("<style>.popup {height: 220px !important; top: 50% !important;} .popup-text { margin-top: 85px !important; }</style><h3 style='font-size: 1.3em;nono'>谢谢参与</h3>")
   if(lang == "kr") res.send("<style>.popup-text { margin-top: 85px !important; }</style><h3>쿠폰이 사용되었습니다.</h3>");
 }
   });
