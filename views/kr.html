@@ -48,7 +48,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="hidden" name="savedip" id="ip" name="Savedip">
           <input type="hidden" name="used_cnt" id="used">
           <input type="hidden" name="lang" value="kr">
-          <button class="cta" id="coupon_btn">확인</button>
+
+          <button class="cta" id="coupon_btn" disabled>확인</button>
           </form>
           <button class="cta" id="cancel">취소</button>
           </div>
@@ -72,13 +73,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a href="#">
                 <div class="event-text-container">
                 <form id="coupon-form">
-                <button id="coupon_btn" button class="event-text">
+                <button id="coupon_btn2" button class="event-text">
                   <p>록시땅 매장에<br />방문하시면,</p>
                   <img class="svg-text" src="images/text-kor.svg" alt="NEW 이모르뗄 리셋 오일 인 세럼"/>
                   <p>사셰를 드립니다.</p>
                   <input type="hidden" name="coupon" value='<%= coupon %>'>
                   <input type="hidden" name="currentip" value='<%= ip %>'>
                   <input type="hidden" name="lang" value="kr" id="lang">
+                             <span class="consent"> <input type="checkbox" id="privacy_checkbox" name="privacy_consent" value="1" class="consent" /> 쿠폰 발인 확인을 위한 IP 수집에 동의합니다. 이벤트 종료 후 수집된 IP는 즉시 파기됩니다.</span>
                   <span class="coupon-cta">쿠폰 받기</span><span class="small-arrow"> ></span></button>
                 </form>
                 </div>
@@ -120,4 +122,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   </body>
         <script src="js/client.js"></script>
+                <script>
+             
+$(document).ready(function(){
+    $("#privacy_checkbox").change(function(){ // 개인정보 처리 보호 방침을 
+        if($("#privacy_checkbox").is(":checked")){
+            document.getElementById("coupon_btn2").disabled = false;
+        }else{
+            document.getElementById("coupon_btn2").disabled = true;
+        }
+    });
+    
+});
+        </script>
 </html>

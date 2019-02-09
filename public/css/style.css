@@ -27,6 +27,10 @@ a {text-decoration: none;}
   z-index: 20;
 }
 
+.consent {
+    font-size: 8px;
+}
+
 .popup-text {margin-top: 15px;}
 .popup-text h3 {padding-bottom: 15px; font-size: 1.05em; font-weight: 900;}
 .popup-text img {width: 265px;}
@@ -155,7 +159,7 @@ a {text-decoration: none;}
 
 .event-text-container {
   position: absolute;
-  margin-top: 20px;
+  margin-top: -15px;
   right: 4%;
 }
 
@@ -164,9 +168,9 @@ a {text-decoration: none;}
 .coupon-cta {
   background: transparent;
   font-family: normal dotum,'YaHei', sans-serif;
-  padding: 40px;
-  padding-top: 27px;
-  height: 150px;
+  padding: 0px;
+  padding-bottom: 15px;
+  height: 200px;
   width: 176px;
   font-weight: 600;
   font-size: 1em;

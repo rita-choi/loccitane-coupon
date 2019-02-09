@@ -1,125 +1,145 @@
 <!DOCTYPE html>
 <html lang="cn-">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Atom editor">
-  	<meta name="Keywords" content="">
-  	<meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
     <!-- kakaotalk thumnail -->
     <meta content="https://loccitanereset.com" property="og:url" />
-<meta content="L'OCCITANE Promotion" property="og:title" />
-<meta content="L'OCCITANE Sample Promotion" property="og:description" />
-<meta content="images/Kakao_thumbnail.jpg" property="og:image" />
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="400">
+    <meta content="L'OCCITANE Promotion" property="og:title" />
+    <meta content="L'OCCITANE Sample Promotion" property="og:description" />
+    <meta content="images/Kakao_thumbnail.jpg" property="og:image" />
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
     <title>L'OCCITANE Promotion</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/clarins-icon.jpg">
     <script src="js/jquery/jquery.min.js"></script>
     <script src='js/jquery/jquery-latest.js'></script>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NKQ7WP8');</script>
-<!-- End Google Tag Manager -->
-  </head>
-  <body>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKQ7WP8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKQ7WP8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
-      <div class="logo_wrap">
-        <div class="primary-logo"><a href="https://www.loccitane.com/" target="_blank"><img alt="L'OCCITANE" src="images/logo.jpg" /></a></div>
-      </div>
+        <div class="logo_wrap">
+            <div class="primary-logo"><a href="https://www.loccitane.com/" target="_blank"><img alt="L'OCCITANE" src="images/logo.jpg" /></a></div>
+        </div>
     </header>
     <section>
-      <div class="content-section">
-        <div class="popup hidden" id="popup1">
-          <div class="popup-text">
-          <div id="msg"></div>
-          </div>
-          <div class="cta-section">
-          <form id="used-coupon" name="used_form">
-          <input type="hidden" name="savedcoupon" id="coupon" >
-          <input type="hidden" name="savedip" id="ip" name="Savedip">
-          <input type="hidden" name="used_cnt" id="used">
-          <input type="hidden" name="lang" value="cn">
-          <button class="cta" id="coupon_btn">确认</button>
-          </form>
-          <button class="cta" id="cancel">返回</button>
-          </div>
+        <div class="content-section">
+            <div class="popup hidden" id="popup1">
+                <div class="popup-text">
+                    <div id="msg"></div>
+                </div>
+                <div class="cta-section">
+                    <form id="used-coupon" name="used_form">
+                        <input type="hidden" name="savedcoupon" id="coupon">
+                        <input type="hidden" name="savedip" id="ip" name="Savedip">
+                        <input type="hidden" name="used_cnt" id="used">
+                        <input type="hidden" name="lang" value="cn">
+
+                        <button class="cta" id="coupon_btn">确认</button>
+                    </form>
+                    <button class="cta" id="cancel">返回</button>
+                </div>
+            </div>
+            <div class="hero-section-wrap">
+                <div class="language-wrap">
+                    <div class="option-container">
+                        <ul>
+                            <li><a href="kr">KR</a></li>
+                            <li class="option-border">|</li>
+                            <li><a href="/">CN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hero-product-title"><img src="images/title-cn.svg" /></div>
+                <div class="event-content-section">
+                    <div class="hero-product-text-wrap">
+                        <div class="event-text-container">
+                            <div class="event-text">
+                                <form id="coupon-form">
+                                    <input type="hidden" name="coupon" value='<%= coupon %>' />
+                                    <input type="hidden" name="currentip" value='<%= ip %>' />
+                                    <input type="hidden" name="lang" value="cn" id="lang" />
+                                    <button id="coupon_btn2" class="coupon-cta" disabled>
+                                        <span class="click-text">按此</span>
+                                        <p>立即换领试用装</p>
+                                         <input type="checkbox" id="privacy_checkbox" name="privacy_consent" value="1" /> <span class="consent"> 同意收集IP以确认是否发放优惠券。 活动结束后,收集到的IP立即被销毁。 </span>
+                                    </button>
+                                   
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="promotion" target="_blank">
+                        <div class="sub-product">
+                            <p>了解产品更多</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="gift-section-wrap">
+                <div class="gift-section-title">
+                    <h3>YOUR <b>GIFT</b></h3>
+                </div>
+                <div class="gift-content-wrap">
+                    <div class="gift-part-wrap">
+                        <div class="gift left-box">
+                            <h4>第一重礼遇</h4>
+                            <hr class="text-line" />
+                            <p>凡购买焕活微囊<br />肌底精华液<br />
+                                30ML一支, 获得<br />
+                                <span class="highlight">焕活微囊肌底精华液<br /></span>
+                                5ML一支**</span><br />(价值 USD11) 。</p>
+                            <img src="images/product01.png">
+                        </div>
+                        <div class="vl"></div>
+                        <div class="gift right-box">
+                            <h4>第二重礼遇</h4>
+                            <hr class="text-line" />
+                            <p>凡购买欧舒丹<br />产品满USD150,
+                                <br />获得<span class="highlight">礼品一份</span>**
+                                <br />(价值 USD30)。</p>
+                            <img src="images/product02.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-section-wrap">
-          <div class="language-wrap">
-            <div class="option-container">
-              <ul>
-                <li><a href="kr">KR</a></li>
-                <li class="option-border">|</li>
-                <li><a href="/">CN</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="hero-product-title"><img src="images/title-cn.svg" /></div>
-          <div class="event-content-section">
-            <div class="hero-product-text-wrap">
-                <div class="event-text-container">
-                <div class="event-text">
-                  <form id="coupon-form">
-                  <input type="hidden" name="coupon" value='<%= coupon %>'>
-                  <input type="hidden" name="currentip" value='<%= ip %>'>
-                  <input type="hidden" name="lang" value="cn" id="lang">
-                  <button id="coupon_btn" class="coupon-cta">
-                    <span class="click-text">按此</span>
-                    <p>立即换领试用装</p></button>
-                </form>
-                </div>
-              </div>
-            </div>
-            <a href="promotion" target="_blank"><div class="sub-product">
-              <p>了解产品更多</p>
-            </div></a>
-          </div>
+    </section>
+    <div class="site-footer">
+        <div class="footer-section-contents">
+            <p>换领地点：乐天免税店12/F欧舒丹专柜</p>
+            <p>活动时间：2018年10月1日至2018年11月30日</p>
+            <p><span class="small-text-footer">*肌肤表皮 **送完即止</span></p>
         </div>
-        <div class="gift-section-wrap">
-            <div class="gift-section-title">
-              <h3>YOUR <b>GIFT</b></h3>
-            </div>
-            <div class="gift-content-wrap">
-              <div class="gift-part-wrap">
-                <div class="gift left-box">
-                  <h4>第一重礼遇</h4>
-                  <hr class="text-line"/>
-                  <p>凡购买焕活微囊<br />肌底精华液<br />
-                    30ML一支, 获得<br />
-                  <span class="highlight">焕活微囊肌底精华液<br /></span>
-                  5ML一支**</span><br />(价值 USD11) 。</p>
-                  <img src="images/product01.png">
-                </div>
-                <div class="vl"></div>
-                <div class="gift right-box">
-                  <h4>第二重礼遇</h4>
-                  <hr class="text-line"/>
-                  <p>凡购买欧舒丹<br />产品满USD150,
-                  <br />获得<span class="highlight">礼品一份</span>**
-                  <br />(价值 USD30)。</p>
-                  <img src="images/product02.png">
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </section>
-  <div class="site-footer">
-    <div class="footer-section-contents">
-      <p>换领地点：乐天免税店12/F欧舒丹专柜</p>
-      <p>活动时间：2018年10月1日至2018年11月30日</p>
-      <p><span class="small-text-footer">*肌肤表皮 **送完即止</span></p>
     </div>
-  </div>
-  </body>
-      <script src="js/client.js"></script>
+</body>
+<script src="js/client.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#privacy_checkbox").change(function() {
+            if ($("#privacy_checkbox").is(":checked")) {
+                document.getElementById("coupon_btn2").disabled = false;
+            } else {
+                document.getElementById("coupon_btn2").disabled = true;
+            }
+        });
+    });
+
+</script>
+
 </html>
